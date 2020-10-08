@@ -93,6 +93,14 @@ def drawFloor(screen : pg.Surface, color : pg.Color):
     polygon(screen, color, [(0, 358), (800, 340), (800, 530), (0, 530)])
 
 
+def drawFrontMountains(screen : pg.Surface, color : pg.Color):
+
+    polygon(screen, color, [(0,200), (95,300), (175,400), (175,530), (0,530)])
+    polygon(screen, color, [(315,525), (380,528), (510,450), (545,470), (545,530), (315,530)])
+
+    drawParabola(screen, color, (175,530), (315,530), lambda x: (-5/784)*(x-315)**2+525 )
+    drawParabola(screen, color, (545,530), (800,530), lambda x: (-9/3380)*(x-700)**2+500 )
+
 #init
 pg.init()
 
@@ -103,6 +111,7 @@ drawBackground(screen)
 drawTopMounains(screen, pg.Color("#FC9831"))
 drawBottomMountains(screen, pg.Color("#AC4334"))
 drawFloor(screen, pg.Color("#B38694"))
+drawFrontMountains(screen, pg.Color("#2C0721"))
 
 pg.display.update()
 clock = pg.time.Clock()
