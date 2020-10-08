@@ -66,7 +66,7 @@ class Goat(Model):
             rotateCenter = self.rotateCenter
 
         sf, dest = self.getRotationAndShift(sf, rotateCenter, rotate, point)
-        sf, offset = self.getScale(sf, scale=-scale)
+        sf, offset = self.getScale(sf, scale=scale)
         surface.blit(sf, dest+offset)
 
 

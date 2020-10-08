@@ -15,6 +15,17 @@ def rotateAroundPoint(surface : pg.Surface, point, rotate)->pg.Surface:
     sf = pg.transform.rotate(sf, rotate)
     return sf
 
+class Animation():
+    """
+    Has one major method: renderAnimationOn(surface, point, time)
+    time is a real number in [0,1]
+    time = 0 - start of the animation
+    time = 1 - end of it
+    """
+    def renderAnimationOn(self, surface : pg.Surface, point, time):
+        pass
+
+
 
 class Model():
 
